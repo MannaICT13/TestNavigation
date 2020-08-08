@@ -10,11 +10,25 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var nextViewBtnOutlet: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+      
     }
 
-
+    
+    @IBAction func nextViewTapped(_ sender: Any) {
+        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        let secondVC = storyboard.instantiateViewController(identifier: "SecondViewController") as SecondViewController
+        self.navigationController?.pushViewController(secondVC, animated: true
+        )
+        
+        
+    }
+    
+    
 }
 
